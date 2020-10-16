@@ -10,3 +10,6 @@ bootstrap = Bootstrap(app)
 socketio = SocketIO(app)
 
 from app import routes
+
+if __name__ == '__main__':
+    socketio.run(app)
