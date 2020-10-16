@@ -1,0 +1,34 @@
+{% extends 'bootstrap/base.html' %}
+
+<!-- Title Goes Here -->
+{% block title %}
+    {% if title %}
+        Bolder Chat | {{ title }}
+    {% else %}
+        Bolder Chat
+    {% endif %}
+{% endblock %}
+
+<!-- Head Section -->
+{% block head %}
+    {{ super() }}
+    <link rel="icon" type="image/svg" href="{{url_for('static', filename = 'img/chat.png')}}">
+{% endblock %}
+
+<!-- Link Styles -->
+{% block styles %}
+    {{ super() }}
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename = 'css/styles.css') }}">
+{% endblock }
+
+<!-- Main Content Section -->
+{% block content %}
+
+{% endblock %}
+
+<!-- JS Section -->
+{% block scripts %}
+    {{ super() }}
+    <script src="{{ url_for('static', filename = js/main.js) }}"></script>
+{% endblock %}
+
