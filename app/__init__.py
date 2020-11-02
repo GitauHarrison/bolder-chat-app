@@ -18,6 +18,7 @@ login.login_view = 'login'
 mail = Mail()
 moment = Moment()
 
+
 def create_app(config_class=Config):
     app = Flask(__name__)
     app.config.from_object(config_class)
@@ -37,6 +38,15 @@ def create_app(config_class=Config):
 
     from app.main import bp as main_bp
     app.register_blueprint(main_bp)
+
+    def start_ngrok():
+        from pyngrok import ngrok
+
+        url = ngrok.connect(5000)
+        print(' * Tunnel URL: ', url)
+
+    if app.config['START_NGROK']:
+        start_ngrok()
 
     if not app.debug:
         if app.config['MAIL_SERVER']:
