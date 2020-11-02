@@ -1,11 +1,14 @@
-from app import app, socketio, send
+from app import app
 from flask import render_template, url_for
 
 @app.route('/')
 def index():
     return render_template('home.html', title = 'Home')
 
-@socketio.on('message')
-def handleMessage(msg):
-    print('Message: ' + msg)
-    send(msg, broadcast=True)
+@app.route('login')
+def login():
+    return render_template('login.html', title = 'Login')
+
+@app.route('/register')
+def register():
+    return render_template ('register.html', title = 'Register')
