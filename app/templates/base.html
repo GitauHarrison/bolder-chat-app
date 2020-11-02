@@ -71,5 +71,7 @@
     {{ super() }}
     <script type="text/javascript" src="{{ url_for('static', filename = 'js/main.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <!-- Add Moment Js -->
+    {{ moment.include_moment() }}
 {% endblock %}
 
