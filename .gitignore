@@ -78,3 +78,5 @@ __pycache__/
 migrations
 app.db
 .flaskenv
+
+config.py
