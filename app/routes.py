@@ -33,10 +33,10 @@ def logout():
     logout_user()
     return redirect(url_for('login'))
 
-@app.route('register')
+@app.route('/register', methods = ['GET', 'POST'])
 def register():
-    if current_user.is_authenticated():
-        return redirect(url_parse('home'))
+    if current_user.is_authenticated:
+        return redirect(url_for('home'))
     form = RegistrationForm()
     if form.validate_on_submit():
         user = User(first_name = form.first_name.data, last_name = form.last_name.data, username = form.username.data, email = form.email.data)
