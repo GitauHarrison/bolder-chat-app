@@ -7,7 +7,7 @@
                 <h1>Login</h1>
                 {{ wtf.quick_form(form) }}
                 <p>
-                    Forgot your Password? <span><a href="#">Reset Here</a></span>.
+                    Forgot your Password? <span><a href="{{ url_for('reset_password_request') }}">Reset Here</a></span>.
                 </p>
                 <p>
                     New here? <span><a href=" {{ url_for('register') }} ">Register here</a></span>.
