@@ -16,7 +16,7 @@ def before_request():
 @bp.route('/home')
 @login_required
 def home():
-    return render_template('home.html', title = 'Home', username = current_user.username)
+    return render_template('home.html', title = 'Home', username = current_user.username, rooms = ROOMS)
 
 @bp.route('/profile/<username>')
 def profile(username):
