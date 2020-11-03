@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () =>{
     var socket = io();
 
-    let room = 'Lounge';
-    joinRoom('Lounge')
+    let room = 'General';
+    joinRoom('General');
 
     // Display incoming messages
     socket.on('message', data =>{
@@ -17,9 +17,8 @@ document.addEventListener('DOMContentLoaded', () =>{
             p.innerHTML = span_username.outerHTML + br.outerHTML +  data.msg + br.outerHTML + span_timestamp.outerHTML;
             document.querySelector('#display-messages').append(p);
         }else{
-            printSysMsg(data.msg)
-        }
-        
+            printSysMsg(data.msg);
+        }        
     });
 
     // Used for demonstration purposes
@@ -30,6 +29,8 @@ document.addEventListener('DOMContentLoaded', () =>{
     // Send message    
     document.querySelector('#send-message').onclick =() => {
         socket.send({'msg': document.querySelector('#user-message').value, 'username': username, 'room': room});
+        // Clear input area
+        document.querySelector('#user-message').value = '';
     }
 
     // Room Selection
@@ -56,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     function joinRoom(room){
         socket.emit('join', { 'username': username, 'room': room });
         // Clear message area
-        document.querySelector('#display-messages').innerHTML = ''
+        document.querySelector('#display-messages').innerHTML = '';
     }
 
     // Print system message
