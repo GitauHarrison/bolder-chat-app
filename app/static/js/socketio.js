@@ -1,8 +1,5 @@
 document.addEventListener('DOMContentLoaded', () =>{
     var socket = io();
-    socket.on('connect', function() {
-        socket.send('I\'m connected!');
-    });
 
     socket.on('message', data =>{
         const p = document.createElement('p');
