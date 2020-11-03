@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () =>{
     var socket = io();
 
-    let room;
+    let room = 'Lounge';
+    joinRoom('Lounge')
 
     // Display incoming messages
     socket.on('message', data =>{
@@ -9,10 +10,16 @@ document.addEventListener('DOMContentLoaded', () =>{
         const span_username = document.createElement('span');
         const span_timestamp = document.createElement('span');
         const br = document.createElement('br');
-        span_username.innerHTML = data.username;
-        span_timestamp.innerHTML = data.timestamp;
-        p.innerHTML = span_username.outerHTML + br.outerHTML +  data.msg + br.outerHTML + span_timestamp.outerHTML;
-        document.querySelector('#display-messages').append(p);
+
+        if (data.username){
+            span_username.innerHTML = data.username;
+            span_timestamp.innerHTML = data.timestamp;
+            p.innerHTML = span_username.outerHTML + br.outerHTML +  data.msg + br.outerHTML + span_timestamp.outerHTML;
+            document.querySelector('#display-messages').append(p);
+        }else{
+            printSysMsg(data.msg)
+        }
+        
     });
 
     // Used for demonstration purposes
