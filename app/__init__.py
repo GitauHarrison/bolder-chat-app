@@ -9,6 +9,7 @@ from logging.handlers import SMTPHandler, RotatingFileHandler
 import os
 from flask_mail import Mail
 from flask_moment import Moment
+from flask_socketio import SocketIO
 
 bootstrap = Bootstrap()
 db = SQLAlchemy()
@@ -17,6 +18,7 @@ login = LoginManager()
 login.login_view = 'auth.login'
 mail = Mail()
 moment = Moment()
+socketio = SocketIO()
 
 
 def create_app(config_class=Config):
@@ -29,6 +31,7 @@ def create_app(config_class=Config):
     login.init_app(app)
     mail.init_app(app)
     moment.init_app(app)
+    socketio.init_app(app)
 
     from app.errors import bp as errors_bp
     app.register_blueprint(errors_bp)
