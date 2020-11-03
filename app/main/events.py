@@ -10,3 +10,12 @@ def message(data):
     send({'msg': data['msg'], 'username': data['username'], 'timestamp': strftime('%d %b, %Y %I:%M %p', localtime()) })
     
     
+@socketio.on('join')
+def join(data):
+    join_room(data['room'])
+    send({'msg': data['username'] + 'has joined the ' + data['room'] + 'room.'}, room = data['room'])
+
+@socketio.on('leave')
+def leave(data):
+    leave_room(data['room'])
+    send({ 'msg': data['username'] + 'has left the ' + data['room'] + 'room.' }, room = data['room'])
