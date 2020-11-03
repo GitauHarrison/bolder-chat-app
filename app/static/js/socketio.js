@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () =>{
     var socket = io();
 
+    let room;
+
+    // Display incoming messages
     socket.on('message', data =>{
         const p = document.createElement('p');
         const span_username = document.createElement('span');
@@ -12,12 +15,31 @@ document.addEventListener('DOMContentLoaded', () =>{
         document.querySelector('#display-messages').append(p);
     });
 
-    socket.on('some-event', data =>{
-        console.log(data);
-    });
+    // Used for demonstration purposes
+    // socket.on('some-event', data =>{
+    //     console.log(data);
+    // });
 
     // Send message    
     document.querySelector('#send-message').onclick =() => {
         socket.send({'msg': document.querySelector('#user-message').value, 'username': username});
     }
+
+    // Room Selection
+    document.querySelectorAll('select-rooms').forEach(p =>{
+        p.onclick = () => {
+            let newRoom = p.innerHTML;
+            if (newRoom == room){
+                msg = `You are already in ${room} room.`
+                printSysMsg(msg);
+            } else{
+                leaveRoom(room);
+                joinRoom(newRoom);
+                room = newRoom;
+            }
+        }
+    });
+
+
+
 })
