@@ -22,11 +22,11 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     // Send message    
     document.querySelector('#send-message').onclick =() => {
-        socket.send({'msg': document.querySelector('#user-message').value, 'username': username});
+        socket.send({'msg': document.querySelector('#user-message').value, 'username': username, 'room': room});
     }
 
     // Room Selection
-    document.querySelectorAll('select-rooms').forEach(p =>{
+    document.querySelectorAll('.select-room').forEach(p =>{
         p.onclick = () => {
             let newRoom = p.innerHTML;
             if (newRoom == room){
@@ -48,5 +48,14 @@ document.addEventListener('DOMContentLoaded', () =>{
     // Join room
     function joinRoom(room){
         socket.emit('join', { 'username': username, 'room': room });
+        // Clear message area
+        document.querySelector('#display-messages').innerHTML = ''
+    }
+
+    // Print system message
+    function printSysMsg(msg){
+        const p = document.createElement('p');
+        p.innerHTML = msg;
+        document.querySelector('#display-messages').append(p);
     }
 })
