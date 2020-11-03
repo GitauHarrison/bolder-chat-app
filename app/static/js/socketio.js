@@ -40,6 +40,9 @@ document.addEventListener('DOMContentLoaded', () =>{
         }
     });
 
-
+    // Leave room
+    function leaveRoom(room){
+        socket.emit('leave', {'username': username, 'room': room});
+    }
 
 })
