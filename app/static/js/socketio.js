@@ -45,4 +45,8 @@ document.addEventListener('DOMContentLoaded', () =>{
         socket.emit('leave', {'username': username, 'room': room});
     }
 
+    // Join room
+    function joinRoom(room){
+        socket.emit('join', { 'username': username, 'room': room });
+    }
 })
