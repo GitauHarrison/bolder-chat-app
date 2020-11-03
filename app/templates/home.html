@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
+            <h1>Bolder Chat</h1>
+        </div>
+    </div>
+    <div class="row main-secton">
+        <!-- Room Selection Side Bar -->
+        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">            
+            <nav id="side-bar">
+
+            </nav>
+        </div>
+        <!-- Message Area -->
+        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4" id="scrollable">
+            <div class="row">
+                <!-- Display Message -->
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" id="display-messages" >
+
+                </div>
+            </div>
+            <div class="row">
+                <!-- Write Message -->
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" id="write-messages" >
+                    <input type="text" id="user-message" placeholder="Type here..." autocomplete="off">
+                    <button type="button" id="send-message">SEND</button>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+    <!-- Get Username -->
+    <script type="text/javascript">
+        const username = `{{ username }}`;
+    </script>
+
+    <p id="some_id">{{ username }}</p>
+
+{% endblock %}
