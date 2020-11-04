@@ -43,7 +43,7 @@ This is a real-time chat application built using `python` and `flask`. I have ut
 * [Gitau Harrison](https://github.com/GitauHarrison)
 
 #### Deployed Application
-* [BoderChat App on Heroku](https://bolderchat-app.herokuapp.com/)
+* [BolderChat App on Heroku](https://bolderchat-app.herokuapp.com/)
 
 #### Testing
 
