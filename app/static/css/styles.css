@@ -88,8 +88,8 @@ input[type=text]:focus{
     margin-left: 1em;
     padding: 0.5em 0.5em 0.5em 1em;
     border-radius: 5px;
-    border: 0.5px solid#e6f2ff;
-    background-color: #e6f2ff;
+    border: 0.5px solid#e6e6e6;
+    background-color:#e6e6e6;
     /* animation */
     /* animation-name: fadeIn;
     animation-duration: 0.75s;
@@ -101,8 +101,8 @@ input[type=text]:focus{
     margin-right:1em;
     padding: 0.5em 0.5em 0.5em 1em;
     border-radius: 5px;
-    border: 0.5px solid #e6ffe6;
-    background-color:#e6ffe6;
+    border: 0.5px solid #d9d9d9;
+    background-color:#d9d9d9;
     /* animation */
     /* animation-name: fadeIn;
     animation-duration: 0.75s;
