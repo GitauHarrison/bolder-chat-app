@@ -47,12 +47,12 @@ nbproject
 composer.lock
 
 .DS_Store
-.env
-.flaskenv
+#.env
+#.flaskenv
 *.pyc
 *.pyo
-env/
-env*
+#env/
+#env*
 dist/
 build/
 *.egg
@@ -75,11 +75,11 @@ htmlcov/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 
-migrations
-app.db
-.flaskenv
+#migrations
+#app.db
+#.flaskenv
 
-config.py
+#config.py
 
 #Files to include when pushing to heroku
 # migrations
