@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () =>{
+    
     var socket = io();
 
     let room = 'General';

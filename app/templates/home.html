@@ -2,23 +2,18 @@
 {% import 'bootstrap/wtf.html' as wtf %}
 
 {% block app_content %}
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
-            <h1>Bolder Chat</h1>
-        </div>
-    </div>
     <div class="row main-secton">
         <!-- Room Selection Side Bar -->
-        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">            
-            <nav id="side-bar">
-                <h4>ROOMS</h4>
+        <div class="col-sm-12 col-md-2 col-lg-2 col-xl-2 text-center" id="side-bar">            
+            <nav>
+                <h4>ROOMS</h4><hr>
                 {% for room in rooms %}
                     <p class="select-room"> {{ room | title }} </p>
                 {% endfor %}
             </nav>
         </div>
         <!-- Message Area -->
-        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4" id="scrollable">
+        <div class="col-sm-12 col-md-10 col-lg-10 col-xl-10" id="scrollable">
             <div class="row">
                 <!-- Display Message -->
                 <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" id="display-messages" >
@@ -28,8 +23,8 @@
             <div class="row">
                 <!-- Write Message -->
                 <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" id="write-messages" >
-                    <input type="text" id="user-message" placeholder="Type here..." autocomplete="off">
-                    <button type="button" id="send-message">Send</button>
+                    <input type="text" id="user-message" placeholder="Type here..." class="form-control" autocomplete="off" aria-label="Type a message" aria-describedby="basic-addon2">
+                    <button type="button" id="send-message"><img src="{{ url_for('static', filename = 'images/send_message.png') }}"></button>
                 </div>
             </div>
         </div>

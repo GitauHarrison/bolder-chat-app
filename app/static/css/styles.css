@@ -1,0 +1,85 @@
+/* --------------------------------------------------- */
+/* GENERAL LAYOUT */
+/* --------------------------------------------------- */
+.wrapper {
+    display: flex;
+}
+
+
+
+/* --------------------------------------------------- */
+/* GENERAL CHAT LAYOUT */
+/* --------------------------------------------------- */
+.navbar{
+    margin-bottom: 0px;
+}
+.main-secton{
+    overflow: hidden; /* Makee this div contain its floated children */
+    width: 100%;
+}
+
+
+
+
+/* --------------------------------------------------- */
+/* SIDE BAR CONTENT */
+/* --------------------------------------------------- */
+#side-bar{
+    background-color: #6666ff;
+    padding: 10px;  
+    color: #cccccc;      
+    float: left; /* Make this div as wide as its contents */
+    min-height: 94.8vh;
+    padding: 10px;    
+}
+@media all and (min-width: 768px) {
+    #side-bar {
+        float: left; /* Make this div as wide as its contents */
+        
+    }
+}
+#sidebar p:hover {
+    background-color: #ffc107;
+}
+#sidebar {display: none;}
+
+/* --------------------------------------------------- */
+/* SCROLLABLE CONTENT */
+/* --------------------------------------------------- */
+#scrollable{
+    background-color: #f2f2f2;
+    margin: 0px;
+    overflow: hidden; /* Make this div take up the rest of the horizontal space, and no more */    
+    min-height: 94.8vh;
+    padding: 10px;
+    margin: 0px;
+}
+#display-messages{    
+    min-height: 86vh;
+    max-height: 86vh;
+    overflow-y: auto; /*Make  this section scrolable */
+}
+@media (max-width: 567px) {
+    #display-messages {
+        min-height: 80vh;
+        max-height: 80vh;
+        overflow-y: auto; /*Make  this section scrolable */
+    }
+}
+#write-messages{
+    padding-left: 1em;
+    padding-right: 1em;
+    bottom: 0;
+}
+input, button{
+    border: 0.5px solid #ebe6e3;
+    border-radius: 3px;
+    background-color: white;      
+}
+input{
+    padding-bottom: 4px;
+}
+input[type=text]:focus{
+    border-color: #b3d9ff;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 10px #b3d9ff;
+}
