@@ -42,7 +42,12 @@ This is a real-time chat application built using `python` and `flask`. I have ut
 #### Contributors:
 * [Gitau Harrison](https://github.com/GitauHarrison)
 
-To test the project out, you can clone it to your local machine:
+#### Deployed Application
+* [BoderChat App on Heroku](https://bolderchat-app.herokuapp.com/)
+
+#### Testing
+
+To test the project out, you can clone this repo to your local machine:
 
 ```python
 $ git clone git@github.com:GitauHarrison/bolder-chat-app.git
@@ -64,7 +69,7 @@ There are two ways you can run the application:
 ```python
 $ flask run
 ```
-The flask run command introduced in Flask 0.11 can be used to start a Flask-SocketIO development server based on Werkzeug, but this method of starting the Flask-SocketIO server is not recommended due to lack of WebSocket support. 
+The `flask run` command introduced in Flask 0.11 can be used to start a Flask-SocketIO development server based on Werkzeug, but this method of starting the Flask-SocketIO server is not recommended due to lack of WebSocket support. 
 
 2. Using the `chat.py` python script:
 ```python
