@@ -25,9 +25,9 @@
 /* SIDE BAR CONTENT */
 /* --------------------------------------------------- */
 #side-bar{
-    background-color: #6666ff;
+    background-color: #f8f8f8;;
     padding: 10px;  
-    color: #cccccc;      
+    color: black;      
     float: left; /* Make this div as wide as its contents */
     min-height: 94.8vh;
     padding: 10px;    
