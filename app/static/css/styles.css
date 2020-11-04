@@ -4,7 +4,14 @@
 .wrapper {
     display: flex;
 }
-
+h1, p{
+    padding: 10px;
+}
+.my-form{
+    border: 1px solid #e6e6e6;
+    padding: 20px;
+    border-radius: 3px;
+}
 
 
 /* --------------------------------------------------- */
