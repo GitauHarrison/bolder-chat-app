@@ -48,7 +48,7 @@ composer.lock
 
 .DS_Store
 .env
-.flaskenv
+
 *.pyc
 *.pyo
 env/
@@ -76,6 +76,4 @@ htmlcov/
 __pycache__/
 
 
-app.db
-.flaskenv
 
