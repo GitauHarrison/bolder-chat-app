@@ -108,6 +108,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         p.innerHTML = msg;
         document.querySelector('#display-messages').append(p);
         scrollDownChatWindow()
-
+        // Autofocus on the textbox
+        document.querySelector('#user-message').focus();
     }
 })
