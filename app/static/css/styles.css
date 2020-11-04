@@ -88,13 +88,47 @@ input[type=text]:focus{
     margin-left: 1em;
     padding: 0.5em 0.5em 0.5em 1em;
     border-radius: 5px;
-    border-color: grey;
-    border-width: 0.5px;
-    border-style: solid;
-    background-color: #C2DBFB;
+    border: 0.5px solid #cce6ff;
+    background-color: #cce6ff;
     /* animation */
     animation-name: fadeIn;
     animation-duration: 0.75s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
+}
+.my-msg {
+    margin-left:7em;
+    margin-right:1em;
+    padding: 0.5em 0.5em 0.5em 1em;
+    border-radius: 5px;
+    border: 0.5px solid #e6fff2;
+    background-color: #e6fff2;
+    /* animation */
+    animation-name: fadeIn;
+    animation-duration: 0.75s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+.system-msg {
+    margin-right:7em;
+    margin-left: 1em;
+    padding: 0.5em 0.5em 0.5em 1em;
+    color: #656d78;
+    font-size:0.9em;
+}
+
+.timestamp {
+    color: #656d78;
+    font-size:0.7em;
+}
+
+.other-username {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #206ED2;
+}
+.my-username {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #FF6B13;
 }
