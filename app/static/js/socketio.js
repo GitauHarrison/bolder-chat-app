@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 printSysMsg(data.msg);
             }
         }
+        scrollDownChatWindow();
     });
 
     // Used for demonstration purposes
@@ -93,6 +94,12 @@ document.addEventListener('DOMContentLoaded', () =>{
         document.querySelector('#display-messages').innerHTML = '';
         // Autofocus on the textbox
         document.querySelector('#user-message').focus();
+    }
+
+    // Scroll chat window down
+    function scrollDownChatWindow() {
+        const chatWindow = document.querySelector("#display-messages");
+        chatWindow.scrollTop = chatWindow.scrollHeight;
     }
 
     // Print system message
