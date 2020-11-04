@@ -10,4 +10,5 @@ def make_shell_context():
     return {'db': db, 'User': User}
 
 if __name__ == '__main__':
-    socketio.run(app, debug=True)
+    # socketio.run(app, debug=True)
+    app.run()
