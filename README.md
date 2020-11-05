@@ -82,3 +82,7 @@ The `socketio.run(app)` startup method is favoured to run WebSockets, hence the 
 Once your application is running, you can access your localhost on http://127.0.0.1:5000/. Additionally, if you look carefully in your terminal, you will see `* Tunnel URL:  NgrokTunnel: "http://4209c9af6d43.ngrok.io" -> "http://localhost:5000"`
 
 The `HTTP` value may be different from the one shown here because I am using the free tier package of `ngrok`. Paste the link http://4209c9af6d43.ngrok.io on another device, say your mobile phone, to test the application while it is on localhost.
+
+### How to Use the App
+
+Sign in as two different users on two browsers, say on Chromium and Firefox. In Chromium, you can sign in as `user1` and as `user2` in Firefox. Start chatting to see how realtime the application is.
