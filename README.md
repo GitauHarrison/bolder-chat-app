@@ -6,11 +6,11 @@ And this is how it looks like:
 
 ![BolderChat App](app/static/images/bolder_chat_app.png)
 
-#### Overview
+### Overview
 
 This is a real-time chat application built using `python` and `flask`. I have utilized websockets to facilitate real-time chat experience, and in particular, I have used the `flask-socketio` extension. 
 
-#### Features
+### Features
 
 * User Authentication
 * Functional Password Reset Feature
@@ -25,7 +25,7 @@ This is a real-time chat application built using `python` and `flask`. I have ut
 * Immediate Addition of User in Default Room
 * Chat Privacy in All Rooms
 
-#### Tools Used
+### Tools Used
 * Flask Framework
 * Flask SocketIO
 * Twitter Bootstrap for Cross-browser Responsiveness
@@ -39,13 +39,13 @@ This is a real-time chat application built using `python` and `flask`. I have ut
 * Ngrok for Localhost Testing
 
 
-#### Contributors:
+### Contributors:
 * [Gitau Harrison](https://github.com/GitauHarrison)
 
-#### Deployed Application
+### Deployed Application
 * [BolderChat App on Heroku](https://bolderchat-app.herokuapp.com/)
 
-#### Testing
+### Testing
 
 To test the project out, you can clone this repo to your local machine:
 
@@ -77,7 +77,7 @@ $ python chat.py # it is a python script
 ```
 The `socketio.run(app)` startup method is favoured to run WebSockets, hence the second way if recommended.
 
-##### Localhost Testing
+#### Localhost Testing
 
 Once your application is running, you can access your localhost on http://127.0.0.1:5000/. Additionally, if you look carefully in your terminal, you will see `* Tunnel URL:  NgrokTunnel: "http://4209c9af6d43.ngrok.io" -> "http://localhost:5000"`
 
