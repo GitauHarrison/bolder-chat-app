@@ -1,14 +1,16 @@
 # Bolder Chat App
 
-The full design of this real-time chat app can be found [here](https://www.figma.com/proto/IcpQGeCpSqsgPNZcXSd2x6/Bolder-Chat-App?node-id=1%3A2&scaling=min-zoom). I will follow this design to create it using Flask and SocketIO.
+### Overview
+
+This is a real-time chat application built using `python` and `flask`. I have utilized websockets to facilitate real-time chat experience, and in particular, I have used the `flask-socketio` extension. 
+
+### Design
+
+The full design of this real-time chat app can be found [here](https://www.figma.com/proto/IcpQGeCpSqsgPNZcXSd2x6/Bolder-Chat-App?node-id=1%3A2&scaling=min-zoom&page-id=0%3A1). I will follow this design to create it using Flask and SocketIO.
 
 And this is how it looks like:
 
 ![BolderChat App](app/static/images/bolder_chat_app.png)
-
-### Overview
-
-This is a real-time chat application built using `python` and `flask`. I have utilized websockets to facilitate real-time chat experience, and in particular, I have used the `flask-socketio` extension. 
 
 ### Features
 
